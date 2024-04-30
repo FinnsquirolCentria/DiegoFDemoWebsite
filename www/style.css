@@ -1,5 +1,5 @@
 body {
-    background-color: #00a859;
+    background-color: rgb(32, 31, 31);
     font-family: Arial, sans-serif;
     color: #ffffff;
     margin: 0;
@@ -12,7 +12,7 @@ body {
     flex: 1;
 }
 .navbar {
-    background-color: #007547;
+    background-color: rgb(70, 70, 70);
     padding: 20px;
     text-align: center;
     position: relative;
@@ -108,7 +108,7 @@ body {
 }
 
 .footer {
-    background-color: #007547;
+    background-color: rgb(70, 70, 70);
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -207,8 +207,8 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: #ffffff;
-    background-color: #19885b;
-    border-color: #19885b;
+    background-color: #0041a3;
+    border-color: #192488;
     border-radius: 5px;
     cursor: pointer;
     position: relative;
@@ -352,7 +352,7 @@ li p {
 }
 
 .post {
-    background-color: #4bc6ff;
+    background-color: #0041a3;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -370,7 +370,7 @@ li p {
 }
 
 .post-content h2 {
-    color: #3B5998;
+    color: #4bc6ff;
     margin-bottom: 10px;
 }
 
