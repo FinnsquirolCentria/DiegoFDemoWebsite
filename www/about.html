@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <script src="https://kit.fontawesome.com/f7478db212.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>  
+    <div class="container">
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/blog.html">Blog</a>
+            <a href="mailto:diegofinnila@gmail.com">Send email</a>
+
+        </div>
+    </div>
+
+    <div class="about-container">
+
+            <div class="portrait-about">
+                <img src="images/profilepic.png" alt="Diego's Portrait">
+            </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="tabs">
+                <button class="tab-button" onclick="openTab('Skills', event)"> Skills </button>
+                <button class="tab-button" onclick="openTab('Education', event)"> Education </button>
+                <button class="tab-button" onclick="openTab('Experience', event)"> Experience </button>               
+            </div>
+
+            <div id="Skills" class="tab-selected" style="display:none;">
+                <h2> Skills </h2>
+                <ul>
+                    <li>
+                        Web development: Building and maintainance of  websites or web applications.<a href="https://builtin.com/software-engineering-perspectives/web-development">Learn more</a>
+                    </li>
+                    <li> Skill 2: brief info about the skill. <a href="#">Learn more</a>
+                    </li>
+                    <li> Skill 3: brief info about the skill. <a href="#">Learn more</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="Education" class="tab-selected" style="display:none;">
+                <h2> Education </h2>
+                <li>
+                    High school diploma (2019): German Nicaraguan School.<a href="https://coalnic.edu.ni/">Learn more</a>
+                </li>
+                <li> CS50 course (2021): Code Fundación Uno. <a href="https://code-fu.net.ni/">Learn more</a>
+                </li>
+                <li> Bachelor of engineering, Information technology: Centria UAS (Ongoing). <a href="https://net.centria.fi/en/">Learn more</a>
+                </li>
+            </div>
+
+            <div id="Experience"class="tab-selected" style="display:none;">
+                <h2> Experience </h2>
+                <ul>
+                    <li>
+                        Job title (Year): place and from month, year to month year.
+                    </li>
+                    <li> Job title 2 (Year): place and from month, year to month, year.</li>
+                    <li> Job title 3 (Year): place and from month, year to month, year.</li>
+                </ul>
+            </div>
+
+            </div>
+    </div>
+
+    <div class="services-section">
+        <h1>Services</h1>
+        <div class="service-columns">
+            <div class="service-column">
+                <div class="circle-icon">
+                    <i class="fa-solid fa-laptop"></i>
+                </div> 
+                <h3>Web design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="service-column">
+                <div class="circle-icon">
+                    <i class="fa-brands fa-app-store"></i>
+                </div>  
+                <h3>App development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+            </div>
+            <div class="service-column">
+
+                <div class="circle-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>  
+                <h3>Full-stack development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+
+        </div>
+
+        <div class="portfolio-section">
+            <div class="portfolio-title">
+                <h1>Portfolio</h1>
+            </div>
+            <div class="portfolio-column">
+                <h3>Project 1</h3>
+                <img src="images/sampleimage.png" alt="Image 1">
+            </div>
+            <div class="portfolio-column">
+                <h3>Project 2</h3>
+                <img src="images/sampleimage.png" alt="Image 2">
+            </div>
+            <div class="portfolio-column">
+                <h3>Project 3</h3>
+                <img src="images/sampleimage.png" alt="Image 3">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Diego Finnilä. All rights reserved.</p>
+        <a href="https://www.facebook.com/diego.finnila/" class="fa fa-facebook"></a>
+        <a href="https://www.linkedin.com/in/diego-oskari-finnil%C3%A4-l%C3%B3pez-743669222/?locale=en_US" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/finnsquirol/?hl=en" class="fa fa-instagram"></a>
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

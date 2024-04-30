@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>  
+    <div class="container">
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/blog.html">Blog</a>
+            <a href="mailto:diegofinnila@gmail.com">Send email</a>
+        </div>
+
+        <div class="blog-content">
+            <h1>Welcome to My Blog</h1>
+            <div id="posts" class="posts-container"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Diego Finnilä. All rights reserved.</p>
+        <a href="https://www.facebook.com/diego.finnila/" class="fa fa-facebook"></a>
+        <a href="https://www.linkedin.com/in/diego-oskari-finnil%C3%A4-l%C3%B3pez-743669222/?locale=en_US" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/finnsquirol/?hl=en" class="fa fa-instagram"></a>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", fetchPosts);
+
+        function fetchPosts() {
+            fetch('http://localhost:3000/posts')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch posts');
+                    }
+                    return response.json();
+                })
+                .then(displayPosts)
+                .catch(error => console.error('Error fetching posts:', error));
+        }
+
+        function displayPosts(posts) {
+            const postsContainer = document.getElementById('posts');
+            postsContainer.innerHTML = '';
+
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('post');
+
+                const titleElement = document.createElement('h2');
+                titleElement.textContent = post.title;
+
+                const authorElement = document.createElement('p');
+                authorElement.textContent = 'Author: ' + post.author;
+
+                const contentElement = document.createElement('p');
+                contentElement.textContent = post.content;
+
+                const imageElement = document.createElement('img');
+                imageElement.src = post.image;
+                imageElement.alt = 'Image for post: ' + post.title;
+
+                const postContent = document.createElement('div');
+                postContent.classList.add('post-content');
+                postContent.appendChild(titleElement);
+                postContent.appendChild(authorElement);
+                postContent.appendChild(contentElement);
+
+                const postImageContainer = document.createElement('div');
+                postImageContainer.classList.add('post-image-container');
+                postImageContainer.appendChild(imageElement);
+
+                postElement.appendChild(postContent);
+                postElement.appendChild(postImageContainer);
+
+                postsContainer.appendChild(postElement);
+            });
+        }
+    </script>
+</body>
+</html>
